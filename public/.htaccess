@@ -23,13 +23,14 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     # تفعيل X-XSS-Protection لتجنب هجمات XSS
 
     Header set X-XSS-Protection "1; mode=block"
-    
+
 </IfModule>
 
 # منع الوصول إلى ملفات .env و .htaccess مباشرة
 <FilesMatch "(\.env|\.htaccess)">
     Require all denied
 </FilesMatch>
+
 
 # منع الوصول إلى الملفات غير المرغوب فيها
 <FilesMatch "\.(bak|config|sql|swp|tmp)$">
