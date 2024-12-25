@@ -21,6 +21,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
     # تفعيل X-XSS-Protection لتجنب هجمات XSS
+    
     Header set X-XSS-Protection "1; mode=block"
 </IfModule>
 
